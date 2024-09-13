@@ -43,3 +43,22 @@ def exibir_extrato(saldo, extrato):
     print(f"\nSaldo: R$ {saldo:.2f}")
     print("==========================================")
 
+while True:
+    opcao = input(menu)
+
+    if opcao == "d":
+        saldo, extrato = depositar(saldo, extrato)
+
+    elif opcao == "s":
+        saldo, extrato, numero_saques = sacar(saldo, extrato, numero_saques)
+
+    elif opcao == "e":
+        exibir_extrato(saldo, extrato)
+
+    elif opcao == "q":
+        break
+
+    else:
+        print("Operação inválida, por favor selecione novamente a operação desejada.")
+
+
